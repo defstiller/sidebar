@@ -1,8 +1,9 @@
 import './App.css';
-
+import Sidebar from "./Sidebar/Sidebar"
 function App() {
-  return (
-
+  return (<>
+    <Sidebar />
+  </>
   );
 }
 
