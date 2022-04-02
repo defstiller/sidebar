@@ -1,3 +1,4 @@
+*,html{margin:0;padding:0}
 .App {
   text-align: center;
 }
@@ -5,7 +6,7 @@
 aside {
   width: 25%;
 }
-button {
+.btnXmark {
   height: 2.2vw;
   width: 2.5vw;
   color: transparent; 
@@ -13,3 +14,22 @@ button {
   border-color: transparent;
   cursor: pointer;
 }
+
+
+
+
+/* LOADER CSS STARTS */
+.loader {
+  margin: auto;
+  border: 20px solid #EAF0F6;
+  border-radius: 50%;
+  border-top: 20px solid #FF7A59;
+  width: 100px;
+  height: 100px;
+  animation: spinner 4s linear infinite;
+}
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* LOADER CSS ends */
