@@ -1,28 +1,37 @@
+import {useState} from "react"
 import SidebarItem from './SidebarItem'
 import SidebarSocialItem from './SidebarSocialItem'
 import {links, social} from "./links"
-import xMark from "./xMark.svg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-    faXmark
-  } from "@fortawesome/free-solid-svg-icons";
+import xMark from "./resources/xMark.svg"
+import bars from "./resources/bars.svg"
 function Sidebar() {
-
-    return <>
-    <aside>
-    <button><img src={xMark} alt="close mark" /></button>  
-        <div>
+    const [isOpen, setIsOpen] = useState(false)
+    function handleButtonClick() {
+        setIsOpen(!isOpen)
+    }
+    
+    if(isOpen) { //If state is open return sidebar menu, else return button
+        return <>
+            <aside>
+            <button onClick={handleButtonClick}><img src={xMark} alt="close sidebar mark" /></button>  
+            <div>
             {links.map(link => {
                 return <SidebarItem key={link.id} {...link} />
             })}
-        </div>
-        <div>
+            </div>
+            <div>
             {social.map(item => {
                 return <SidebarSocialItem key={item.id} {...item} />
             })}
-        </div>
-    </aside>
-    </>
+            </div>
+            </aside>
+            </>
+        
+    } else { 
+    return <button onClick={handleButtonClick}><img src={bars} alt="open sidebar mark" /></button>
+    }
 }
+
+
 
 export default Sidebar;

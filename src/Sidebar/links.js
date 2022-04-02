@@ -6,6 +6,12 @@ import {
   faCalendarDays,
   faBook,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookSquare,
+  faTwitterSquare,
+  faLinkedin,
+  faVk,
+} from "@fortawesome/free-brands-svg-icons"
 export const links = [
   {
     id: 1,
@@ -43,26 +49,21 @@ export const social = [
   {
     id: 1,
     url: 'https://www.facebook.com',
-    icon:"fa-brands fa-facebook-square",
+    icon: faFacebookSquare,
   },
   {
     id: 2,
     url: 'https://www.twitter.com',
-    icon:"fa-brands fa-twitter-square",
+    icon: faTwitterSquare,
   },
   {
     id: 3,
     url: 'https://www.linkedin.com',
-    icon: "fa-brands fa-linkedin",
+    icon: faLinkedin,
   },
   {
     id: 4,
     url: 'https://vk.com',
-    icon:"fa-brands fa-vk",
-  },
-  {
-    id: 5,
-    url: 'https://www.twitter.com',
-    icon: "broken",
+    icon: faVk,
   },
 ];

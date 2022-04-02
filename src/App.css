@@ -5,3 +5,11 @@
 aside {
   width: 25%;
 }
+button {
+  height: 2.2vw;
+  width: 2.5vw;
+  color: transparent; 
+  background-color: transparent; 
+  border-color: transparent;
+  cursor: pointer;
+}
