@@ -7,6 +7,7 @@ function Modal() {
  * Fetches data from a URL and then sets the newData state. Sets loading to true while responce is processing.
  */
     async function handleLoadClick() {
+        setNewData()
         setIsloading(true)
         const response = await fetch("https://course-api.com/javascript-store-products")
         if(response.status >= 200 && response.status <=299) {
